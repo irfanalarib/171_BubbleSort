@@ -15,12 +15,12 @@ void input(){ //Prosedur input
                 break;
             }
         else {
-            cout << "\nArray maksimal 20 elemen. \n";
+            cout << "\nArray maksimal 20 elemen.\n";
         }
     }
     cout << endl;
     cout << "====================" << endl;
-    cout << "Masukan elemen array" << endl;
+    cout << "Masukan elemen array =" << endl;
     cout << "====================" << endl;   
      
     for (int i=0;i<n;i++){
@@ -34,7 +34,7 @@ void bubblesortArray(){
     int pass = 1; // step 1
         do {
             for (int j=0;j<=n-1-pass;j++){ //step 2
-                if (arr[j] > arr[j=1]) { // step 3
+                if (arr[j] > arr[j+1]) { // step 3
                  int temp;
                  temp = arr[j];
                  arr[j] = arr[j+1];
@@ -42,7 +42,7 @@ void bubblesortArray(){
                 } 
              }
              pass = pass + 1; //step 4
-        }while(pass <= n-1); //step 5
+        }while(pass<= n-1); //step 5
 }
 
 void display(){
@@ -61,4 +61,5 @@ void display(){
 
 int main(){
     input ();
+    bubblesortArray();
 }
